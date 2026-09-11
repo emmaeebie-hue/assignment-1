@@ -75,11 +75,25 @@ print(recommendations)
 
 
 # DESIGN MEMO (write below in a comment):
-# 1. I used loops to go through the products and process their tags.
-#    I also used set intersection to find tags that matched the customer's
-#    preferences. Sets were useful because they remove duplicates and make
-#    comparisons easier.
-# 2. If there were 1000+ products, I would still use sets to make the
-#    comparisons efficient. I could also organize or index the product tags
-#    so the program would not have to check every product each time.
+# 1.  For this project, I used lists, sets, loops, functions, and set
+# intersections. I started by using a list to store the customer's
+# preferences as they entered them. I then converted the list to a set so
+# that if the same preference was entered more than once, it would only be
+# counted once. I also converted the product tags into sets. The main reason
+# I did this was so I could easily compare the customer's preferences to the
+# tags for each product. I used a loop to go through each product and the
+# count_matches function to find how many tags the product had in common with
+# the customer's preferences. I used set intersection for this because it
+# directly shows which tags appear in both sets. After finding the number of
+# matches for each product, I sorted the results so the products with the
+# most matching tags would be recommended first.
+
+# 2. If there were 1000 or more products, the basic idea of the program could
+# stay the same, but I would probably need to make it more efficient. Right
+# now, the program goes through every product to see how well it matches the
+# customer's preferences. With a much larger product catalog, this could take
+# more time. I could organize the products by their tags so that the program
+# could find products with matching tags more quickly instead of checking
+# every product. I could also use a database if the amount of product data
+# became too large to manage easily in the Python file.
 
